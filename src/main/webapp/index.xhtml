@@ -8,6 +8,7 @@
     <title>Hello World JSF 2.3</title>
 </h:head>
 <h:body>
+	<f:facet name="header">Hi</f:facet>
     <h:form>
         <h:outputLabel for="input" value="Who do you want to greet?"/>
         <h:inputText id="input" value="#{helloWorldBacking.name}"/>
@@ -15,10 +16,7 @@
                          action="#{helloWorldBacking.greetPerson}">
         </h:commandButton>
         <br/>
-        <h:outputText value="#{helloWorldBacking.greet}"/>
+        <h:outputText value="#{helloWorldBHiacking.greet}"/>
     </h:form>
-    <h:outputLabel value="Username: " for="text1" />
- 
-<h:inputText id="text1" />
 </h:body>
 </html>
