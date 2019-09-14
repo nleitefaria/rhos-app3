@@ -1,0 +1,3 @@
+<jboss-web>
+    <context-root>rhos-app3</context-root>
+</jboss-web>
