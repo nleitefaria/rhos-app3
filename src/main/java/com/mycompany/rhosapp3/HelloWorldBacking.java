@@ -11,7 +11,6 @@ public class HelloWorldBacking {
 	@Inject
 	HelloWorldManager hwm;
 	
-    
 	private String name;
     private String greet;
     
