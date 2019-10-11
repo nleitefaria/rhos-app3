@@ -15,15 +15,16 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<primefaces.version>6.2</primefaces.version>
+		<resteasy.version>3.0.14.Final</resteasy.version>
 	</properties>
-	
+
 	<repositories>
-        <repository>
-            <id>prime-repo</id>
-            <name>Prime Repo</name>
-            <url>http://repository.primefaces.org</url>
-        </repository>
-    </repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>Prime Repo</name>
+			<url>http://repository.primefaces.org</url>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
@@ -32,6 +33,11 @@
 			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-client</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
 		<!-- PrimeFaces -->
 		<dependency>
 			<groupId>org.primefaces</groupId>
@@ -39,10 +45,10 @@
 			<version>${primefaces.version}</version>
 		</dependency>
 		<dependency>
-            <groupId>org.primefaces.themes</groupId>
-            <artifactId>all-themes</artifactId>
-            <version>1.0.10</version>
-        </dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>all-themes</artifactId>
+			<version>1.0.10</version>
+		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
