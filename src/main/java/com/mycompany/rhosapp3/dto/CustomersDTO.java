@@ -4,44 +4,25 @@ public class CustomersDTO {
 	
 	private Integer id;
 	private String company;
-
 	private String lastName;
-
 	private String firstName;
-
 	private String emailAddress;
-
 	private String jobTitle;
-
 	private String businessPhone;
-
 	private String homePhone;
-
 	private String mobilePhone;
-
 	private String faxNumber;
-
 	private String address;
-
 	private String city;
-
 	private String stateProvince;
-
 	private String zipPostalCode;
-
 	private String countryRegion;
-
 	private String webPage;
-
 	private String notes;
 	
-	
-
 	public CustomersDTO() {
 		super();
 	}
-
-
 
 	public CustomersDTO(Integer id, String company, String lastName, String firstName, String emailAddress,
 			String jobTitle, String businessPhone, String homePhone, String mobilePhone, String faxNumber,
