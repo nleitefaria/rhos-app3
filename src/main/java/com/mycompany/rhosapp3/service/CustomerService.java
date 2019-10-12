@@ -18,7 +18,7 @@ public class CustomerService {
 	
 	public CustomerService(){}
 	
-    public List<CustomersDTO> getEmployeeList(int start, int size)
+    public List<CustomersDTO> getAll(int start, int size)
     {  
     	ResteasyClient client = new ResteasyClientBuilder().build();
         ResteasyWebTarget target = client.target(path + "/all/" + start);
@@ -28,7 +28,7 @@ public class CustomerService {
         return value.getCustomersPage();
     }
 
-    public int getEmployeeTotalCount()
+    public int count()
     {
     	ResteasyClient client = new ResteasyClientBuilder().build();
         ResteasyWebTarget target = client.target(path + "/count");
