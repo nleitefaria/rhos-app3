@@ -15,14 +15,14 @@ public class CustomerLazyDataModel extends LazyDataModel<CustomersDTO>
 	private static final long serialVersionUID = 551614594141174353L;
 	
 	public CustomerLazyDataModel(){	
-		CustomerService cs = new CustomerService();
-        this.setRowCount(cs.count());
+		CustomerService s = new CustomerService();
+        this.setRowCount(s.count());
     }
     
     public List<CustomersDTO> load(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String, Object> filters)
     {
-    	CustomerService cs = new CustomerService(); 
-        return cs.getAll(first / 10, pageSize);
+    	CustomerService s = new CustomerService();
+        return s.getAll(first / 10, pageSize);
     }
 
 }
