@@ -11,7 +11,7 @@
 			<h:form>
 				<p:dataTable var="customer" value="#{customerBean.model}"
 					paginator="true" rows="10"
-					paginatorTemplate="{RowsPerPageDropdown} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+					paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
 					rowsPerPageTemplate="5,10,15" lazy="true">
 					<p:column headerText="Id">
 						<h:outputText value="#{customer.id}" />

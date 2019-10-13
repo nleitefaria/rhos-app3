@@ -4,11 +4,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml"   
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
       >
     <h:body>   	
     	<ui:composition template="/template/common/commonLayout.xhtml">  	
     		<ui:define name="content">
-    			<h2>Products</h2>
+    			<h:form>
+				<p:dataTable var="product" value="#{productBean.model}"
+					paginator="true" rows="10"
+					paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+					rowsPerPageTemplate="5,10,15" lazy="true">
+					<p:column headerText="Id">
+						<h:outputText value="#{product.id}" />
+					</p:column>
+					<p:column headerText="Product code">
+						<h:outputText value="#{product.productCode}" />
+					</p:column>
+					<p:column headerText="Product name">
+						<h:outputText value="#{product.productName}" />
+					</p:column>
+					
+
+				</p:dataTable>
+			</h:form>
     		</ui:define>   		
     	</ui:composition>   	
     </h:body>
