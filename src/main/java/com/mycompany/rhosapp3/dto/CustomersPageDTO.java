@@ -4,32 +4,33 @@ import java.util.List;
 
 public class CustomersPageDTO {
 	
-	private List<CustomersDTO> customersPage;
-	private int total;
+	private List<CustomersDTO> content;
+	private int totalElements;
 	
 	public CustomersPageDTO() {
 		super();
 	}
 
-	public CustomersPageDTO(List<CustomersDTO> productsPage, int total) {
+	public CustomersPageDTO(List<CustomersDTO> content, int totalElements) {
 		super();
-		this.customersPage = productsPage;
-		this.total = total;
+		this.content = content;
+		this.totalElements = totalElements;
 	}
 
-	public List<CustomersDTO> getCustomersPage() {
-		return customersPage;
+	public List<CustomersDTO> getContent() {
+		return content;
 	}
 
-	public void setCustomersPage(List<CustomersDTO> customersPage) {
-		this.customersPage = customersPage;
+	public void setContent(List<CustomersDTO> content) {
+		this.content = content;
 	}
 
-	public int getTotal() {
-		return total;
+	public int getTotalElements() {
+		return totalElements;
 	}
 
-	public void setTotal(int total) {
-		this.total = total;
-	}	
+	public void setTotalElements(int totalElements) {
+		this.totalElements = totalElements;
+	}
+
 }

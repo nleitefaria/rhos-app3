@@ -8,24 +8,23 @@ import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 
-import com.mycompany.rhosapp3.dto.CountDTO;
 import com.mycompany.rhosapp3.dto.CustomersDTO;
 import com.mycompany.rhosapp3.dto.CustomersPageDTO;
 
 public class CustomerService {
 	
-	final String path = "http://rhos-app1-rhos-app1.apps.us-west-1.starter.openshift-online.com:80/rhos-app1/resources/customer"; 
+	final String path = "https://hrk-app6.herokuapp.com/api/v1/customer"; 
 	
 	public CustomerService(){}
 	
     public List<CustomersDTO> getAll(int start, int size)
     {  
     	ResteasyClient client = new ResteasyClientBuilder().build();
-        ResteasyWebTarget target = client.target(path + "/all/" + start);
+        ResteasyWebTarget target = client.target(path + "/all/" + (start + 1));
         Response response = target.request().get();
         CustomersPageDTO value = response.readEntity(CustomersPageDTO.class);
         response.close();
-        return value.getCustomersPage();
+        return value.getContent();
     }
 
     public int count()
@@ -33,9 +32,9 @@ public class CustomerService {
     	ResteasyClient client = new ResteasyClientBuilder().build();
         ResteasyWebTarget target = client.target(path + "/count");
         Response response = target.request().get();
-        CountDTO value = response.readEntity(CountDTO.class);
+        Integer value = response.readEntity(Integer.class);       
         response.close();
-        return value.getCount();
+        return value;
     }
     
     
